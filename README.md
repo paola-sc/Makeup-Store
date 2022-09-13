@@ -4,7 +4,7 @@ This is a fake store using a free makeup api from https://makeup-api.herokuapp.c
 
 ## Description
 
-This portfolio was made with create-react-app, bootstrap, react-bootstrap, and mdbootstrap.
+This portfolio was made with create-react-app, bootstrap, react-bootstrap, axios, and a free makeup api.
 
 ## Executing program
 
