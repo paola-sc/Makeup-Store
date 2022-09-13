@@ -1,13 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+/* General Styling */
 body {
+  font-family: "Jost", sans-serif;
+  color: #000000;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Colors */
+.whitePink {
+  background-color: #ffdedfd1;
+}
+
+.superLightPink {
+  background-color: #ffdedf;
+}
+
+.lightPink {
+  background-color: #ffcacd;
+}
+
+.pink {
+  background-color: #ff9a9f;
+}
+
+.lightPink:hover {
+  background-color: #ff9a9f;
+  color: white;
+  border: none
+}
+
+.darkPink {
+  background-color: #ff7e86;
+}
+
+.salmon {
+  color: #ff0000;
+}
+
+.black {
+  color: #000000;
+}
+
+/* Navbar Styling */
+
+.navbar-nav .dropdown-menu {
+  background-color: #212429;
+  border: none;
+}
+
+div.dropdown-menu.show {
+  padding-left: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Hero Styling */
+.heroBg {
+  background: linear-gradient(0deg, rgba(255,126,134, 0.7), rgba(255,126,134, 0.4)), url("./images/cosmetics.png");
+  width: 100%;
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.heroTextBg {
+  background: linear-gradient(0deg, rgba(0,0,0, 0.4), rgba(0,0,0, 0.4));
+}
+
+/* Pills Menu Styling */
+
+.nav-pills .nav-link {
+  color: #ff0000;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #ff7e86;
 }
