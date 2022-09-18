@@ -17,27 +17,20 @@ export const Home = () => {
         </div>
       </div>
 
-      {/* Rest of the home section */}
+      {/* Promo and Navigation*/}
       <div className="col-11 black text-center mx-auto my-4">
-        <div className="row mb-5">
-          {/* Promotion */}
-          <div className="col-12 col-md-6 mb-4 mb-md-0 mx-auto">
-            <div className="promoBg">
-              <div className="d-flex justify-content-center align-items-end h-100">
-                <Link to="/products/lipstick" className="text-white text-decoration-none">
-                  <div className="text-center promoTextBg py-2 px-3 mb-3 mb-md-5">
-                    <h3 className="m-0">Check out our lipsticks</h3>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-
+        <div className="row mb-3">
           {/* Navigator of product categories */}
           <div className="col-12 col-md-6 mt-2 mt-md-0">
             <div className="d-flex flex-column justify-content mb-3 whitePink rounded">
               {/* Title */}
               <h4 className="pt-3 m-0">Product Categories</h4>
+
+              <div className="p-3 px-sm-5">
+                <h5 className="m-0">
+                  {"Find products based on their category. Then click any sub-category."}
+                </h5>
+              </div>
 
               <div className="d-flex d-inline-flex justify-content-around p-3 px-sm-5 fs-5">
                 {/* Category controllers */}
@@ -219,56 +212,97 @@ export const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Meida credits */}
+          {/* Media Credits */}
+          <div className="col-12 col-md-6 mt-2 mt-md-0">
             <div className="d-flex flex-column justify-content whitePink rounded">
               <div className="p-3">
                 {/* Title */}
                 <h4>Media Credits</h4>
 
                 {/* Credits */}
-                <div className="text-start px-2">
-                  {/* Hero photo */}
+                <div className="row d-flex d-inline-flex text-start m-3">
+
+                  {/* First Column */}
+                  <div className="col-12 col-md-6">
+                    {/* Hero photo */}
+                    <div>
+                      <a
+                        href="https://www.pexels.com/photo/overhead-shot-of-cosmetic-products-4938511/"
+                        title="Makeup products spread over table"
+                        className="text-decoration-none salmon"
+                      >
+                        Hero Photo by Karolina Grabowska - Pexels
+                      </a>
+                    </div>
+
+                    {/* About photo */}
+                    <div>
+                      <a
+                        href="https://www.pexels.com/photo/assorted-cosmetic-lot-2536965/"
+                        title="Mini shopping cart with makeup products inside"
+                        className="text-decoration-none salmon"
+                      >
+                        About Photo by Suzy Hazelwood - Pexels
+                      </a>
+                    </div>
+
+                    {/* Promo photo */}
+                    <div>
+                      <a
+                        href="https://www.pexels.com/photo/crop-beautiful-woman-rouging-lips-6001502/"
+                        title="Woman applying lipstick"
+                        className="text-decoration-none salmon"
+                      >
+                        Promo Photo by Sam Lion - Pexels
+                      </a>
+                    </div>
+
+                    {/* Logo credits */}
+                    <div>
+                      <a
+                        href="https://www.flaticon.com/free-icons/lotus"
+                        title="lotus icons"
+                        className="text-decoration-none salmon"
+                      >
+                        Lotus icon by Freepik - Flaticon
+                      </a>
+                    </div>
+
+                  </div>
+
+
+                  {/* Cart photo 1 */}
                   <div>
                     <a
-                      href="https://www.pexels.com/photo/overhead-shot-of-cosmetic-products-4938511/"
-                      title="Makeup products spread over table"
+                      href="https://www.pexels.com/photo/eyeshadow-pallete-makeup-brush-and-lipstick-3286389/"
+                      title="Close up of eyeshadow pallette over a dresser"
                       className="text-decoration-none salmon"
                     >
-                      Hero Photo by Karolina Grabowska - Pexels
+                      Cart Photo #1 by Klaudia Ekert - Pexels
                     </a>
                   </div>
 
-                  {/* About photo */}
+                  {/* Cart photo 2 */}
                   <div>
                     <a
-                      href="https://www.pexels.com/photo/assorted-cosmetic-lot-2536965/"
-                      title="Mini shopping cart with makeup products inside"
-                      className="text-decoration-none salmon"
-                    >
-                      About Photo by Suzy Hazelwood - Pexels
-                    </a>
-                  </div>
-
-                  {/* Promo photo */}
-                  <div>
-                    <a
-                      href="https://www.pexels.com/photo/crop-beautiful-woman-rouging-lips-6001502/"
+                      href="https://www.pexels.com/photo/woman-applying-lipstick-7383123/"
                       title="Woman applying lipstick"
                       className="text-decoration-none salmon"
                     >
-                      Promo Photo by Sam Lion - Pexels
+                      Cart Photo #2 by Polina Tankilevitch - Pexels
                     </a>
                   </div>
 
-                  {/* Logo credits */}
+                  {/* Cart photo 3 */}
                   <div>
                     <a
-                      href="https://www.flaticon.com/free-icons/lotus"
-                      title="lotus icons"
+                      href="https://www.pexels.com/photo/pulverized-powders-and-assorted-colored-lispticks-1377034/"
+                      title="Lipsticks spread over table"
                       className="text-decoration-none salmon"
                     >
-                      Lotus icon by Freepik - Flaticon
+                      Cart Photo #3 by Cristian Pădureț - Pexels
                     </a>
                   </div>
                 </div>

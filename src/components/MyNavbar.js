@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import "../index";
 
 export const MyNavbar = () => {
-  {/* Modal Controllers */ }
+  {/* Sub-category Controllers */ }
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);

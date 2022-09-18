@@ -74,17 +74,9 @@ div.dropdown-menu.show {
 /* Promo Styling */
 .promoBg {
   background: url("./images/promo-lipstick.png");
-  width: 100%;
-  height: 15rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-@media (min-width: 768px) {
-  .promoBg {
-    height: 24.5rem;
-  }
 }
 
 .promoTextBg {
@@ -100,4 +92,23 @@ div.dropdown-menu.show {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
   background-color: #ff7e86;
+}
+
+/* Container styling */
+.special-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Make item fit in the container div with full height and width */
+.responsive-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }

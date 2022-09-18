@@ -1,7 +1,11 @@
 import React from "react";
 import { Item } from "./Item";
+import { Checkout } from "../Checkout";
 
 export const Basket = (props) => {
+  /* Checkout Modal controls */
+  const [modalShow, setModalShow] = React.useState(false);
+
   /* Importing cart and its functions*/
   const { cartItems, onAdd, onRemove } = props
 
@@ -93,7 +97,7 @@ export const Basket = (props) => {
                     <div className="col-6 col-sm-3 col-md-3 mt-3">
                       <button
                         className="btn btn-dark fs-5"
-                        onClick={() => alert("Implement Checkout")}
+                        onClick={() => setModalShow(true)}
                       >
                         Checkout
                       </button>
@@ -105,6 +109,12 @@ export const Basket = (props) => {
           </div>
         )}
       </div>
+
+      <Checkout
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        price={totalPrice}
+      />
     </div>
   );
 };

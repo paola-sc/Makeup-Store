@@ -71,8 +71,8 @@ export const ProductList = () => {
       </h1>
 
       { /* Search Bar */}
-      <form className="d-flex mx-auto col-10 my-4" role="search" onSubmit={handleSubmit}>
-        <input onChange={handleChange} autoComplete="off" className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+      <form className="d-flex mx-auto col-10 col-md-9 my-4" role="search" onSubmit={handleSubmit}>
+        <input onChange={handleChange} autoComplete="off" className="form-control me-2" type="search" placeholder="Search by name" aria-label="Search" />
         <button className="btn btn-dark" type="submit">Search</button>
       </form>
 

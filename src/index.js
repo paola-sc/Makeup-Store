@@ -22,7 +22,7 @@ root.render(
         <Route path="/cart" element={<Cart />} />
         <Route path="/about" element={<About />} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
-    <Footer/>
   </CartProvider>
 );
