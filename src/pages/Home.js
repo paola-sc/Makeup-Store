@@ -1,27 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState, useEffect } from "react";
-import { Product } from "../components/Product";
+import React from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 import "../index.css";
 
 export const Home = () => {
-  let [product, setProduct] = useState([]);
-
-  async function fetchProduct() {
-    let response = await axios(
-      "https://makeup-api.herokuapp.com/api/v1/products/1046.json"
-    );
-    let results = await response.data;
-    setProduct(results);
-  }
-
-  useEffect(() => {
-    fetchProduct();
-  }, []);
 
   return (
     <>
+      {/* Hero section */}
       <div className="heroBg">
         <div className="d-flex justify-content-center align-items-center h-100">
           <div className="text-white text-center heroTextBg p-3">
@@ -30,33 +16,38 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="black text-center my-4">
-        <div
-          className="row d-flex d-inline-flex justify-content-center"
-          style={{ width: "90%" }}
-        >
-          <div className="col mb-2" style={{ maxWidth: "30rem" }}>
-            <div className="flex flex-column justify-content-center m-3">
-              <h3>Check out our new lipstick!</h3>
-              <div className="d-flex justify-content-center">
-                <Product
-                  image={product.api_featured_image}
-                  name={product.name}
-                  id={product.id}
-                />
+
+      {/* Rest of the home section */}
+      <div className="col-11 black text-center mx-auto my-4">
+        <div className="row mb-5">
+          {/* Promotion */}
+          <div className="col-12 col-md-6 mb-4 mb-md-0 mx-auto">
+            <div className="promoBg">
+              <div className="d-flex justify-content-center align-items-end h-100">
+                <Link to="/products/lipstick" className="text-white text-decoration-none">
+                  <div className="text-center promoTextBg py-2 px-3 mb-3 mb-md-5">
+                    <h3 className="m-0">Check out our lipsticks</h3>
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
-          <div className="col mb-3" style={{ maxWidth: "30rem" }}>
-            <div className="d-flex flex-column justify-content m-3 whitePink rounded">
+
+          {/* Navigator of product categories */}
+          <div className="col-12 col-md-6 mt-2 mt-md-0">
+            <div className="d-flex flex-column justify-content mb-3 whitePink rounded">
+              {/* Title */}
               <h4 className="pt-3 m-0">Product Categories</h4>
-              <div className="d-flex d-inline-flex justify-content-around p-3 px-sm-5">
+
+              <div className="d-flex d-inline-flex justify-content-around p-3 px-sm-5 fs-5">
+                {/* Category controllers */}
                 <div
                   className="nav flex-column nav-pills"
                   id="v-pills-tab"
                   role="tablist"
                   aria-orientation="vertical"
                 >
+                  {/* Lips */}
                   <button
                     className="nav-link active"
                     id="v-pills-lips-tab"
@@ -69,6 +60,8 @@ export const Home = () => {
                   >
                     Lips
                   </button>
+
+                  {/* Eyes */}
                   <button
                     className="nav-link"
                     id="v-pills-eyes-tab"
@@ -81,6 +74,8 @@ export const Home = () => {
                   >
                     Eyes
                   </button>
+
+                  {/* Others */}
                   <button
                     className="nav-link"
                     id="v-pills-others-tab"
@@ -94,7 +89,10 @@ export const Home = () => {
                     Others
                   </button>
                 </div>
+
+                {/* Category contents */}
                 <div className="tab-content p-3" id="v-pills-tabContent">
+                  {/* Lips */}
                   <div
                     className="tab-pane fade show active"
                     id="v-pills-lips"
@@ -108,7 +106,7 @@ export const Home = () => {
                     >
                       <li>
                         <Link
-                          to="/products/category/lip_liner"
+                          to="/products/lip_liner"
                           className="black text-decoration-none"
                         >
                           Lip liner
@@ -116,7 +114,7 @@ export const Home = () => {
                       </li>
                       <li>
                         <Link
-                          to="/products/category/lipstick"
+                          to="/products/lipstick"
                           className="black text-decoration-none"
                         >
                           Lipstick
@@ -124,6 +122,8 @@ export const Home = () => {
                       </li>
                     </ul>
                   </div>
+
+                  {/* Eyes */}
                   <div
                     className="tab-pane fade"
                     id="v-pills-eyes"
@@ -137,7 +137,7 @@ export const Home = () => {
                     >
                       <li>
                         <Link
-                          to="/products/category/eyeshadow"
+                          to="/products/eyeshadow"
                           className="black text-decoration-none"
                         >
                           Eyeshadow
@@ -145,7 +145,7 @@ export const Home = () => {
                       </li>
                       <li>
                         <Link
-                          to="/products/category/eyeliner"
+                          to="/products/eyeliner"
                           className="black text-decoration-none"
                         >
                           Eyeliner
@@ -153,7 +153,7 @@ export const Home = () => {
                       </li>
                       <li>
                         <Link
-                          to="/products/category/eyebrow"
+                          to="/products/eyebrow"
                           className="black text-decoration-none"
                         >
                           Eyebrow
@@ -161,7 +161,7 @@ export const Home = () => {
                       </li>
                       <li>
                         <Link
-                          to="/products/category/mascara"
+                          to="/products/mascara"
                           className="black text-decoration-none"
                         >
                           Mascara
@@ -169,6 +169,8 @@ export const Home = () => {
                       </li>
                     </ul>
                   </div>
+
+                  {/* Others */}
                   <div
                     className="tab-pane fade"
                     id="v-pills-others"
@@ -182,7 +184,7 @@ export const Home = () => {
                     >
                       <li>
                         <Link
-                          to="/products/category/blush"
+                          to="/products/blush"
                           className="black text-decoration-none"
                         >
                           Blush
@@ -190,7 +192,7 @@ export const Home = () => {
                       </li>
                       <li>
                         <Link
-                          to="/products/category/bronzer"
+                          to="/products/bronzer"
                           className="black text-decoration-none"
                         >
                           Bronzer
@@ -198,7 +200,7 @@ export const Home = () => {
                       </li>
                       <li>
                         <Link
-                          to="/products/category/foundation"
+                          to="/products/foundation"
                           className="black text-decoration-none"
                         >
                           Foundation
@@ -206,7 +208,7 @@ export const Home = () => {
                       </li>
                       <li>
                         <Link
-                          to="/products/category/nail_polish"
+                          to="/products/nail_polish"
                           className="black text-decoration-none"
                         >
                           Nail Polish
@@ -217,26 +219,58 @@ export const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="d-flex flex-column justify-content m-3 whitePink rounded">
+
+            {/* Meida credits */}
+            <div className="d-flex flex-column justify-content whitePink rounded">
               <div className="p-3">
-                <h5>Media Credits</h5>
-                <div>
-                  <a
-                    href="https://www.pexels.com/photo/pink-and-red-lipsticks-3373746/"
-                    title="Pink and red lipsticks"
-                    className="text-decoration-none salmon"
-                  >
-                    Hero Section Photo by Shiny Diamond - Pexels
-                  </a>
-                </div>
-                <div>
-                  <a
-                    href="https://www.flaticon.com/free-icons/lotus"
-                    title="lotus icons"
-                    className="text-decoration-none salmon"
-                  >
-                    Lotus logo icon created by Freepik - Flaticon
-                  </a>
+                {/* Title */}
+                <h4>Media Credits</h4>
+
+                {/* Credits */}
+                <div className="text-start px-2">
+                  {/* Hero photo */}
+                  <div>
+                    <a
+                      href="https://www.pexels.com/photo/overhead-shot-of-cosmetic-products-4938511/"
+                      title="Makeup products spread over table"
+                      className="text-decoration-none salmon"
+                    >
+                      Hero Photo by Karolina Grabowska - Pexels
+                    </a>
+                  </div>
+
+                  {/* About photo */}
+                  <div>
+                    <a
+                      href="https://www.pexels.com/photo/assorted-cosmetic-lot-2536965/"
+                      title="Mini shopping cart with makeup products inside"
+                      className="text-decoration-none salmon"
+                    >
+                      About Photo by Suzy Hazelwood - Pexels
+                    </a>
+                  </div>
+
+                  {/* Promo photo */}
+                  <div>
+                    <a
+                      href="https://www.pexels.com/photo/crop-beautiful-woman-rouging-lips-6001502/"
+                      title="Woman applying lipstick"
+                      className="text-decoration-none salmon"
+                    >
+                      Promo Photo by Sam Lion - Pexels
+                    </a>
+                  </div>
+
+                  {/* Logo credits */}
+                  <div>
+                    <a
+                      href="https://www.flaticon.com/free-icons/lotus"
+                      title="lotus icons"
+                      className="text-decoration-none salmon"
+                    >
+                      Lotus icon by Freepik - Flaticon
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

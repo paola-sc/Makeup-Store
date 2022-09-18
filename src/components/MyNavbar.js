@@ -10,24 +10,39 @@ import { Link } from "react-router-dom";
 import "../index";
 
 export const MyNavbar = () => {
+  {/* Modal Controllers */ }
   const [open1, setOpen1] = useState(false);
   const [open2, setOpen2] = useState(false);
   const [open3, setOpen3] = useState(false);
 
+  {/* Cart Object */ }
   const { cart } = useContext(CartContext);
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Link to="/" className="text-decoration-none">
-          <Navbar.Brand className="d-flex d-inline-flex">
-            <img alt="Lotus icon" src={Lotus} width="32" height="32" />
-            <h3 className="m-0 pt-1 pt-md-0 ms-2">The Beauty Store</h3>
-          </Navbar.Brand>
-        </Link>
+        <div className="d-flex justify-content-start d-inline-flex">
+          {/* Logo and Title */}
+          <Link to="/" className="text-decoration-none">
+            <Navbar.Brand className="d-flex d-inline-flex">
+              <img alt="Lotus icon" src={Lotus} width="32" height="32" />
+              <h3 className="m-0 pt-1 pt-md-0 ms-2">The Beauty Store</h3>
+            </Navbar.Brand>
+          </Link>
+
+          {/* Cart Items */}
+          <Link to="/cart" className="text-decoration-none text-white text-end">
+            <div className="mt-2 pt-1">
+              <i className="fa-solid fa-cart-shopping fs-5 text-white" /> <span className="badge black darkPink">{cart.length}</span>
+            </div>
+          </Link>
+        </div>
+
+        {/* Menu */}
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
+            {/* Home and About pages */}
             <Link to="/" className="text-decoration-none text-white p-2 fs-5">
               Home
             </Link>
@@ -37,6 +52,8 @@ export const MyNavbar = () => {
             >
               About
             </Link>
+
+            {/* Products by type (I named them categories) */}
             <NavDropdown
               title="Categories"
               id="collasible-nav-dropdown"
@@ -55,13 +72,13 @@ export const MyNavbar = () => {
                   <div id="example-collapse-text">
                     <div className="d-flex flex-column ms-3 mb-2">
                       <Link
-                        to="/products/category/lip_liner"
+                        to="/products/lip_liner"
                         className="text-decoration-none text-white"
                       >
                         Lip liner
                       </Link>
                       <Link
-                        to="/products/category/lipstick"
+                        to="/products/lipstick"
                         className="text-decoration-none text-white"
                       >
                         Lipstick
@@ -83,25 +100,25 @@ export const MyNavbar = () => {
                   <div id="example-collapse-text">
                     <div className="d-flex flex-column ms-3 mb-2">
                       <Link
-                        to="/products/category/eyeshadow"
+                        to="/products/eyeshadow"
                         className="text-decoration-none text-white"
                       >
                         Eyeshadow
                       </Link>
                       <Link
-                        to="/products/category/eyeliner"
+                        to="/products/eyeliner"
                         className="text-decoration-none text-white"
                       >
                         Eyeliner
                       </Link>
                       <Link
-                        to="/products/category/mascara"
+                        to="/products/mascara"
                         className="text-decoration-none text-white"
                       >
                         Mascara
                       </Link>
                       <Link
-                        to="/products/category/eyebrow"
+                        to="/products/eyebrow"
                         className="text-decoration-none text-white"
                       >
                         Eyebrow
@@ -115,7 +132,7 @@ export const MyNavbar = () => {
                   onClick={() => setOpen3(!open3)}
                   aria-controls="example-collapse-text"
                   aria-expanded={open3}
-                  className="text-white fs-5"
+                  className="text-white fs-5 mb-1"
                 >
                   Other Products
                 </div>
@@ -123,25 +140,25 @@ export const MyNavbar = () => {
                   <div id="example-collapse-text">
                     <div className="d-flex flex-column ms-3 mb-2">
                       <Link
-                        to="/products/category/blush"
+                        to="/products/blush"
                         className="text-decoration-none text-white"
                       >
                         Blush
                       </Link>
                       <Link
-                        to="/products/category/bronzer"
+                        to="/products/bronzer"
                         className="text-decoration-none text-white"
                       >
                         Bronzer
                       </Link>
                       <Link
-                        to="/products/category/foundation"
+                        to="/products/foundation"
                         className="text-decoration-none text-white"
                       >
                         Foundation
                       </Link>
                       <Link
-                        to="/products/category/nail_polish"
+                        to="/products/nail_polish"
                         className="text-decoration-none text-white mb-2"
                       >
                         Nail Polish
@@ -151,14 +168,6 @@ export const MyNavbar = () => {
                 </Collapse>
               </>
             </NavDropdown>
-            <Link to="/cart" className="text-decoration-none text-white">
-              <div>
-                <i className="fa-solid fa-cart-shopping fs-5 text-white p-2 mt-2" />
-                <span className="badge darkPink black px-2 py-1">
-                  {cart.length}
-                </span>
-              </div>
-            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

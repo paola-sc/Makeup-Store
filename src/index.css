@@ -58,7 +58,7 @@ div.dropdown-menu.show {
 
 /* Hero Styling */
 .heroBg {
-  background: linear-gradient(0deg, rgba(255,126,134, 0.7), rgba(255,126,134, 0.4)), url("./images/cosmetics.png");
+  background: linear-gradient(0deg, rgba(255, 126, 134, 0.7), rgba(255, 126, 134, 0.4)), url("./images/hero-makeup.png");
   width: 100%;
   height: 20rem;
   background-repeat: no-repeat;
@@ -68,7 +68,27 @@ div.dropdown-menu.show {
 }
 
 .heroTextBg {
-  background: linear-gradient(0deg, rgba(0,0,0, 0.4), rgba(0,0,0, 0.4));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+}
+
+/* Promo Styling */
+.promoBg {
+  background: url("./images/promo-lipstick.png");
+  width: 100%;
+  height: 15rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .promoBg {
+    height: 24.5rem;
+  }
+}
+
+.promoTextBg {
+  background: linear-gradient(0deg, rgba(255, 126, 134, 0.7), rgba(255, 126, 134, 0.4));
 }
 
 /* Pills Menu Styling */
@@ -77,6 +97,7 @@ div.dropdown-menu.show {
   color: #ff0000;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
   background-color: #ff7e86;
 }
