@@ -20,7 +20,7 @@ export const MyNavbar = () => {
 
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
+      <Container fluid className="col-12 col-md-11">
         <div className="d-flex justify-content-start d-inline-flex">
           {/* Logo and Title */}
           <Link to="/" className="text-decoration-none">

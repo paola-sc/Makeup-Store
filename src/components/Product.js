@@ -5,7 +5,7 @@ export const Product = (props) => {
 
   return (
     <div
-      className="rounded shadow text-center m-3 p-3 d-flex flex-column align-items-center"
+      className="shadow text-center m-3 p-3 d-flex flex-column align-items-center"
       style={{ width: "18rem" }}
     >
       <div className="my-auto">

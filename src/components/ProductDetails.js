@@ -36,12 +36,12 @@ export const ProductDetails = () => {
     const tags = product.tag_list;
 
     return (
-      <ul style={{ listStyleType: "none" }} className="p-0 m-0 fs-6">
+      <ul style={{ listStyleType: "none"}} className="p-0 m-0 fs-6">
         {tags?.map((tag, i) => (
           <li
             key={i}
             style={{ display: "inline-block" }}
-            className="mb-2 me-2 px-2 py-1 superLightPink rounded"
+            className="mb-2 me-2 px-2 py-1 lightPink rounded"
           >
             {tag}
           </li>
@@ -63,7 +63,7 @@ export const ProductDetails = () => {
   };
 
   return (
-    <div className="col-11 black mx-auto my-3 d-flex flex-column justify-content-center">
+    <div className="col-11 black mx-auto my-3 mb-5 d-flex flex-column" style={{ minHeight: "60vh" }}>
       {/* Top Controls -------------------------------- */}
       <div
         className="d-flex d-inline-flex justify-content-between mt-2 mb-4 mt-md-3 mb-md-5"
@@ -78,7 +78,7 @@ export const ProductDetails = () => {
 
         { /* Details Title */}
         <div className="col-10 text-center">
-          <h1 className="m-0">Details</h1>
+          <h1 className="m-0 fw-bold">Details</h1>
         </div>
 
         { /* Empty space needed for rendering */}

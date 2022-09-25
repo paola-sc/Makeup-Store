@@ -44,9 +44,9 @@ export const ProductList = () => {
   let filteredList = products.filter(product => product.price !== "0.0")
 
   return (
-    <div className="m-4 mb-5 black text-center">
+    <div className="col-11 my-5 text-center mx-auto" style={{ minHeight: "65vh" }}>
       { /* Conditional rendering of title */}
-      <h1>
+      <h1 className="fw-bold mb-0 mb-md-5">
         {parameter === "lipstick"
           ? "Lipsticks"
           : parameter === "lip_liner"

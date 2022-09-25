@@ -27,11 +27,11 @@ export const Basket = (props) => {
     >
       {/* Title */}
       <div className="col m-0 p-0">
-        <h2 className="fw-bold m-0">Cart Items</h2>
+        <h2 className="fw-bold m-0 mb-3">Cart Items</h2>
       </div>
 
       {/* Conditional rendering of basket row d-flex d-inline-flex flex-wrap mt-3 mx-1 mb-4*/}
-      <div className="col superLightPink rounded my-2 py-2">
+      <div className="col lightPink my-2 py-2 rounded">
         {cartItems.length === 0 ? (
           <h4 className="m-2">Your cart is empty</h4>
         ) : (
