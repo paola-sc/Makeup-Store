@@ -46,6 +46,7 @@ export const About = () => {
           <div className="aboutContainer my-3">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224445.18403822664!2d-81.62976936900245!3d28.480871689370737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e77edfac4210bd%3A0x1adc62268ae9b19!2sUniversal%20Orlando%20Resort!5e0!3m2!1sen!2sus!4v1663511991916!5m2!1sen!2sus"
+              title="Store location in map"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               frameBorder="0"
