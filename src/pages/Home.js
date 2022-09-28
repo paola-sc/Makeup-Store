@@ -281,11 +281,11 @@ export const Home = () => {
                     {/* Hero photo */}
                     <div>
                       <a
-                        href="https://www.pexels.com/photo/overhead-shot-of-cosmetic-products-4938511/"
+                        href="https://www.pexels.com/photo/an-assortment-of-beauty-products-on-a-white-surface-7290089"
                         title="Makeup products spread over table"
                         className="text-decoration-none salmon"
                       >
-                        Hero Photo by Karolina Grabowska - Pexels
+                        Hero Photo by MART PRODUCTION - Pexels
                       </a>
                     </div>
 
