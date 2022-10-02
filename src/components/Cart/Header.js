@@ -9,7 +9,7 @@ export const Header = (props) => {
       className="row d-flex justify-content-between m-0 my-4"
     >
       {/* Page title */}
-      <div className="col-6 m-0 p-0">
+      <div className="col m-0 p-0">
         <h2 className="fw-bold m-0">Shopping Cart</h2>
       </div>
 
