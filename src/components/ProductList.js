@@ -11,12 +11,14 @@ export const ProductList = () => {
   let { parameter } = useParams();
   let [products, setProducts] = useState([]);
   let [isLoading, setisLoading] = useState(true);
+  let [productsQty, setProductsQty] = useState(6)
 
   async function fetchProducts() {
     let response = await axios(
       `https://makeup-api.herokuapp.com/api/v1/products.json?product_type=${parameter}`
     );
     let results = await response.data;
+
     setProducts(results);
     setisLoading(false)
   }
@@ -41,10 +43,32 @@ export const ProductList = () => {
     })
 
     setProducts(searchList)
+
+    if (products.length < 60) {
+      fetchProducts()
+
+      let searchList = products.filter((item) => {
+        return item.name.toLowerCase().includes(searchTerm.toLowerCase())
+      })
+
+      setProducts(searchList)
+    }
+
+    console.log(products.length)
+  }
+
+  /* Controlling quantity of products shown */
+  const showMore = () => {
+    setProductsQty(productsQty + 6)
+  }
+
+  const showLess = () => {
+    setProductsQty(productsQty - 6)
   }
 
   /* Filtering products with price of 0.00 */
   let filteredList = products.filter(product => product.price !== "0.0")
+  let reducedList = filteredList.slice(0, productsQty)
 
   return (
     <div className="col-11 my-5 text-center mx-auto" style={{ minHeight: "65vh" }}>
@@ -83,7 +107,7 @@ export const ProductList = () => {
         <>
           { /* Grid of all products from a certain type */}
           < div className="flex d-inline-flex flex-wrap justify-content-center">
-            {filteredList?.map((product, i) => {
+            {reducedList && reducedList.map((product, i) => {
               return (
                 <Product
                   key={i}
@@ -94,7 +118,37 @@ export const ProductList = () => {
                 />
               );
             })}
-          </div></>
+          </div>
+
+          {/* Show More / Show Less Buttons */}
+          <div className="col-12">
+            {productsQty > 4 ?
+              <>
+                <button
+                  type="button"
+                  className="btn btn-dark px-3 py-2 fs-5 mt-3 me-3"
+                  onClick={showMore}>
+                  Show More
+                </button>
+
+                <button
+                  type="button"
+                  className="btn btn-dark px-3 py-2 fs-5 mt-3"
+                  onClick={showLess}>
+                  Show Less
+                </button>
+              </>
+              :
+              <button
+                type="button"
+                className="btn btn-dark px-3 py-2 fs-5 mt-3"
+                onClick={showMore}>
+                Show More
+              </button>
+            }
+          </div>
+
+        </>
       }
     </div >
   );
