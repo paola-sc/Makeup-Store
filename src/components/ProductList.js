@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Product } from "../components/Product";
 import { useParams } from "react-router-dom";
+import { Spinner } from "./Spinner";
 import axios from "axios";
 import "../index.css";
 
@@ -9,6 +10,7 @@ export const ProductList = () => {
   /* Fetching products based on their type (passed as parameter) */
   let { parameter } = useParams();
   let [products, setProducts] = useState([]);
+  let [isLoading, setisLoading] = useState(true);
 
   async function fetchProducts() {
     let response = await axios(
@@ -16,6 +18,7 @@ export const ProductList = () => {
     );
     let results = await response.data;
     setProducts(results);
+    setisLoading(false)
   }
 
   useEffect(() => {
@@ -72,24 +75,27 @@ export const ProductList = () => {
 
       { /* Search Bar */}
       <form className="d-flex mx-auto col-10 col-md-9 my-4" role="search" onSubmit={handleSubmit}>
-        <input onChange={handleChange} autoComplete="off" className="form-control me-2" type="search" placeholder="Search by name" aria-label="Search" />
+        <input onChange={handleChange} autoComplete="off" className="form-control me-2 border border-dark" type="search" placeholder="Search by name" aria-label="Search" />
         <button className="btn btn-dark" type="submit">Search</button>
       </form>
 
-      { /* Grid of all products from a certain type */}
-      <div className="flex d-inline-flex flex-wrap justify-content-center">
-        {filteredList?.map((product, i) => {
-          return (
-            <Product
-              key={i}
-              image={product.api_featured_image}
-              name={product.name}
-              id={product.id}
-              type={product.product_type}
-            />
-          );
-        })}
-      </div>
-    </div>
+      {isLoading ? <Spinner /> :
+        <>
+          { /* Grid of all products from a certain type */}
+          < div className="flex d-inline-flex flex-wrap justify-content-center">
+            {filteredList?.map((product, i) => {
+              return (
+                <Product
+                  key={i}
+                  image={product.api_featured_image}
+                  name={product.name}
+                  id={product.id}
+                  type={product.product_type}
+                />
+              );
+            })}
+          </div></>
+      }
+    </div >
   );
 };

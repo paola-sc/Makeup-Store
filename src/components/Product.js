@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../index.css"
 
 export const Product = (props) => {
 
   return (
     <div
-      className="shadow text-center m-3 p-3 d-flex flex-column align-items-center"
+      className="text-center m-3 p-3 d-flex flex-column align-items-center borderPink rounded"
       style={{ width: "18rem" }}
     >
       <div className="my-auto">

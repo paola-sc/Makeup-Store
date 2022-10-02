@@ -10,11 +10,7 @@ body {
 
 /* Background Colors */
 .lightPink {
-  background-color: #ffdedf;
-}
-
-.pink {
-  background-color: #ff9a9f;
+  background-color: #ffc3c6;
 }
 
 .darkPink {
@@ -26,6 +22,10 @@ body {
   color: #ff0000;
 }
 
+.darkPinkText {
+  color: #ff7e86;
+}
+
 .black {
   color: #000000;
 }
@@ -33,13 +33,19 @@ body {
 /* Home Page- Hero Section Styling */
 
 .heroBg {
-  background: linear-gradient(0deg, rgba(255, 126, 134, 0.7), rgba(255, 126, 134, 0.4)), url("./images/hero.png");
+  background: linear-gradient(0deg, rgba(255, 126, 134, 0.7), rgba(255, 126, 134, 0.4)), url("./images/hero.jpg");
   width: 100%;
   height: 20rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+@media (max-width: 699px) {
+  .heroBg {
+    background: linear-gradient(0deg, rgba(255, 126, 134, 0.7), rgba(255, 126, 134, 0.4)), url("./images/hero-mobile.jpg");
+  }
 }
 
 .heroTextBg {
@@ -124,4 +130,9 @@ div.dropdown-menu.show {
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Prodct - Border */
+.borderPink {
+  border: 1px solid #ff7e87
 }

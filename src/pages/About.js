@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "../images/about.png";
+import Img from "../images/about.jpg";
 import { ContactForm } from "../components/ContactForm";
 import "../index.css"
 

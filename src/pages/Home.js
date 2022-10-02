@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import { Link } from "react-router-dom";
-import Lipstick from "../images/lipstick.png"
-import Eyeshadow from "../images/eyeshadow.png"
-import Bronzer from "../images/bronzer.png"
+import Lipstick from "../images/lipstick.jpg"
+import Eyeshadow from "../images/eyeshadow.jpg"
+import Bronzer from "../images/bronzer.jpg"
 import "../index.css";
 
 export const Home = () => {
@@ -77,7 +77,7 @@ export const Home = () => {
           <div className="col-12 col-md-6 mt-2 mt-md-0">
             <div className="d-flex flex-column justify-content mb-3 lightPink rounded">
               {/* Title */}
-              <h4 className="pt-3 m-0">Product Categories</h4>
+              <h4 className="mt-3 mt-md-0 pt-3">Product Categories</h4>
 
               <div className="p-3 px-sm-5">
                 <h5 className="m-0">
@@ -272,7 +272,7 @@ export const Home = () => {
             <div className="d-flex flex-column justify-content lightPink rounded pb-4">
               <div className="p-3">
                 {/* Title */}
-                <h4>Media Credits</h4>
+                <h4 className="mt-3 mt-md-0">Media Credits</h4>
 
                 {/* Credits */}
                 <div className="row d-flex d-inline-flex text-start m-3">

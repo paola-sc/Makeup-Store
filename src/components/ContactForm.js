@@ -38,7 +38,7 @@ export const ContactForm = () => {
                 </label>
                 <input
                     type="text"
-                    className="form-control"
+                    className="form-control border border-dark"
                     id="exampleFormControlInput1"
                     placeholder="Type your name here"
                 />
@@ -49,7 +49,7 @@ export const ContactForm = () => {
                 </label>
                 <input
                     type="email"
-                    className="form-control"
+                    className="form-control border border-dark"
                     id="exampleFormControlInput2"
                     placeholder="nice.to.meet.you@gmail.com"
                 />
@@ -62,7 +62,7 @@ export const ContactForm = () => {
                     Message
                 </label>
                 <textarea
-                    className="form-control"
+                    className="form-control border border-dark"
                     id="exampleFormControlTextarea1"
                     rows="3"
                     placeholder="Thank you for contacting us!"
