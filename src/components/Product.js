@@ -12,7 +12,7 @@ export const Product = (props) => {
       <div className="my-auto">
         {/* Image */}
         <div style={{ width: "10rem" }} className="mx-auto mt-3">
-          <img src={props.image} className="img-fluid" alt={props.name} />
+          <img src={props.image} className="img-fluid imageProduct" alt={props.name} />
         </div>
 
         {/* Name */}

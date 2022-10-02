@@ -91,7 +91,7 @@ export const ProductDetails = () => {
         <div className="col-12 col-md-6 text-center mb-3 mb-md-0">
           <img
             src={product.api_featured_image}
-            className="img-fluid"
+            className="img-fluid imageProductDetails"
             alt="product"
           />
         </div>

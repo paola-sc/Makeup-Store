@@ -35,8 +35,8 @@ export const Basket = (props) => {
         {cartItems.length === 0 ? (
           <h4 className="m-2">Your cart is empty</h4>
         ) : (
-          <div>
-            <div className="flex d-inline-flex flex-wrap justify-content-around">
+          <div className="text-center text-md-start">
+            <div className="flex d-inline-flex flex-wrap justify-content-around pt-3 px-3">
               {cartItems?.map((item, i) => {
                 return (
                   <Item
@@ -51,7 +51,7 @@ export const Basket = (props) => {
 
             {/* Conditional rendering of basket price */}
             {cartItems.length !== 0 && (
-              <div className="mx-3 fs-4">
+              <div className="pt-2 mx-3 fs-4 text-start">
 
                 <hr />
 
@@ -93,7 +93,7 @@ export const Basket = (props) => {
                   </div>
 
                   {/* Checkout button */}
-                  <div className="row">
+                  <div className="row pb-3">
                     <div className="col-6 col-sm-3 col-md-3 mt-3">
                       <button
                         className="btn btn-dark fs-5"
