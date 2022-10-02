@@ -23,9 +23,7 @@ export const Home = () => {
       {/* Promo and Navigation*/}
       <div className="col-11 black text-center mx-auto my-4">
 
-        <h3 className="fw-bold mt-5 mb-2 mb-md-3">Thank you for visiting our store</h3>
-
-        <div className="row d-flex justify-content-around d-inline-flex flex-wrap mt-3 mb-1">
+        <div className="row d-flex justify-content-around d-inline-flex flex-wrap my-1">
           {/* Lipsticks */}
           <div className="col-12 col-md-4">
             <div className="promoContainer d-flex align-items-center justify-content-center h-100 w-100">
