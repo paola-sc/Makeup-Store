@@ -13,7 +13,7 @@ body {
   background-color: #ffc3c6;
 }
 
-.darkPink {
+.pink {
   background-color: #ff7e86;
 }
 
@@ -22,7 +22,7 @@ body {
   color: #ff0000;
 }
 
-.darkPinkText {
+.pinkText {
   color: #ff7e86;
 }
 
@@ -130,9 +130,4 @@ div.dropdown-menu.show {
   right: 0;
   width: 100%;
   height: 100%;
-}
-
-/* Prodct - Border */
-.borderPink {
-  border: 1px solid #ff7e87
 }

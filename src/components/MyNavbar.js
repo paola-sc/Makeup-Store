@@ -33,7 +33,7 @@ export const MyNavbar = () => {
           {/* Cart Items */}
           <Link to="/cart" className="text-decoration-none text-white text-end">
             <div className="mt-2 pt-1">
-              <i className="fa-solid fa-cart-shopping fs-5 text-white" /> <span className="badge black darkPink">{cart.length}</span>
+              <i className="fa-solid fa-cart-shopping fs-5 text-white" /> <span className="badge black pink">{cart.length}</span>
             </div>
           </Link>
         </div>
