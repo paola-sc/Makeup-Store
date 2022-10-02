@@ -131,3 +131,8 @@ div.dropdown-menu.show {
   width: 100%;
   height: 100%;
 }
+
+/* Prodct - Border */
+.borderPink {
+  border: 1px solid #ff7e87
+}
