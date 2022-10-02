@@ -27,7 +27,7 @@ export const Basket = (props) => {
     >
       {/* Title */}
       <div className="col m-0 p-0">
-        <h2 className="fw-bold m-0 mb-3">Cart Items</h2>
+        <h3 className="fw-bold m-0 mb-3">Cart Items</h3>
       </div>
 
       {/* Conditional rendering of basket row d-flex d-inline-flex flex-wrap mt-3 mx-1 mb-4*/}

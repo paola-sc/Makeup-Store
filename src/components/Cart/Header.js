@@ -10,7 +10,7 @@ export const Header = (props) => {
     >
       {/* Page title */}
       <div className="col-6 m-0 p-0">
-        <h1 className="fw-bold m-0">Shopping Cart</h1>
+        <h2 className="fw-bold m-0">Shopping Cart</h2>
       </div>
 
       {/* Items Count */}
