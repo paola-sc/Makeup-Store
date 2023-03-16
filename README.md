@@ -11,7 +11,7 @@ This site was made with create-react-app, bootstrap, react-bootstrap, axios, and
 All you have to do is run the following command:
 
 ```
-npm run start
+npm install && npm run start
 ```
 
 ## Acknowledgments
